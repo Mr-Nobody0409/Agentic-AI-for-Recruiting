@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# 🤖 Agentic AI for Recruiting
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **AI-powered talent acquisition agent that parses job descriptions, discovers matching candidates, runs personalized outreach conversations, and ranks them by match + interest scores.**
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎯 Quick Start
 
-### `npm start`
+### Live Demo
+🚀 **[Live URL - Deploy Here](#)** *(to be added after Vercel deployment)*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Local Setup (2 minutes)
+- git clone https://github.com/Mr-Nobody0409/agentic-ai-recruiting.git
+- cd agentic-ai-recruiting
+- npm install
+- npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Opens at http://localhost:3000
 
-### `npm test`
+---
+### ✨ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 🔍 Smart JD Parsing
+- Automatically extracts core skills, seniority level, location, and bonus requirements
+- Structured output ready for matching
 
-### `npm run build`
+# 🎯 Intelligent Candidate Matching
+- Scores candidates using hybrid algorithm: 55% skill match + 45% interest
+- Handles skill aliases (e.g., "CI/CD" = "GitHub Actions")
+- Experience bonus: +10% for 5+ years, +5% for 3-4 years
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 💬 Natural Conversational Outreach
+- Runs 7 personalized questions per candidate
+- Sounds like a real recruiter (not AI-sounding)
+- Tracks positive/negative responses in real-time
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 📊 Ranked Shortlist
+- Combined score: (Match × 0.55) + (Interest × 0.45)
+- Exportable as TXT file for team sharing
+- View full conversation history per candidate
+  
+# 🎨 Beautiful Terminal UI
+- Cyberpunk-style dark theme with green/cyan accents
+- Real-time animations and live chat streaming
+- Responsive sidebar log showing all agent actions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+###🚀 Usage Workflow
+- Paste Job Description → Agent auto-parses it
+- Click "Activating Search" → Agent discovers 9 candidates
+- Watch Live Outreach → 7-question conversations per candidate
+- Review Results → Ranked shortlist with scores
+- Export Shortlist → Download as TXT for team
+  
+# Sample Flow (30-60 seconds)
+* Landing → JD Input → Parse (2s) → Discover (8s) → Engage (40s) → Results
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📊 Architecture
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+See ARCHITECTURE.md for:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Detailed scoring algorithm with math
+- System design & data flow
+- Trade-offs & design decisions
+- Candidate matching logic
 
-## Learn More
+# Quick Overview:
+- Input (JD) 
+  ↓
+- Parse Skills & Requirements (SAMPLE_JD)
+  ↓
+- Score 9 Candidates (Match Score = skills + experience)
+  ↓
+- Run 7 Questions Per Candidate (Conversational AI)
+  ↓
+- Calculate Interest Score (% positive responses)
+  ↓
+- Combined Score = (Match × 0.55) + (Interest × 0.45)
+  ↓
+- Output (Ranked Shortlist)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🎮 Key Technologies
+- React - Component-based UI
+- TypeScript - Type safety (setup ready)
+- CSS-in-JS - Styled components with animations
+- No external APIs - All logic client-side with mock data
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🎯 Use Cases
+- ✅ Startup Recruiting - Screen dozens of candidates in minutes
+- ✅ Scale Team Building - Run parallel outreach to multiple candidates
+- ✅ Talent Sourcing - Auto-score candidate pools by match + interest
+- ✅ Preliminary Screening - Get interest levels before recruiter calls
+- ✅ Skill Gap Analysis - Identify which candidates lack key skills
 
-### Analyzing the Bundle Size
+🔄 Performance
+- Full workflow: 30-60 seconds for 9 candidates
+- Per candidate: ~5 seconds (parsing + 7 questions)
+- Scoring: Real-time as responses come in
+- Memory: <10MB (all client-side)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
