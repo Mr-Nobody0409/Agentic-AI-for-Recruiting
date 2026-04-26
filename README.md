@@ -7,9 +7,7 @@
 ## 🎯 Quick Start
 
 ### Live Demo
-🚀 **[Live URL - Deploy Here](#)** 
-
-### live versel url **https://agentic-ai-for-recruiting.vercel.app/(#)**
+🚀 **[https://agentic-ai-for-recruiting.vercel.app/]** 
 
 ### Local Setup (2 minutes)
 - git clone https://github.com/Mr-Nobody0409/agentic-ai-recruiting.git
